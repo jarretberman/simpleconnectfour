@@ -43,6 +43,7 @@ function makeHtmlBoard() {
   // creates table elements to fit a board space
   for (var y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
+    row.classList.add("game-row")
     for (var x = 0; x < WIDTH; x++) {
       const cell = document.createElement("td");
       cell.setAttribute("id", `${y}-${x}`);
