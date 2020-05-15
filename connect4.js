@@ -109,8 +109,10 @@ const checkForTie = () => {
 
 function handleClick(evt) {
   // get x from ID of clicked cell
+  if(evt.target.id === 'column-top') return
   var x = +evt.target.id;
-
+  
+  
   // get next spot in column (if none, ignore click)
   var y = findSpotForCol(x);
   //console.log(x, y)
